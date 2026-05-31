@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — SEO Master</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #06060f;
+            --text: #ffffff;
+            --accent: #00d4ff;
+            --accent-purple: #8b5cf6;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(139, 92, 246, 0.15), transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(0, 212, 255, 0.15), transparent 25%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 4rem 2rem;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            padding: 3rem 4rem;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            position: relative;
+        }
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-purple));
+            border-top-left-radius: 24px;
+            border-top-right-radius: 24px;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            transition: opacity 0.2s;
+        }
+        .back-link:hover {
+            opacity: 0.8;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--accent), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .date {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+            margin-bottom: 2.5rem;
+        }
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.95);
+        }
+        p, li {
+            font-size: 1.05rem;
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        code {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.9em;
+            color: var(--accent);
+        }
+        @media (max-width: 600px) {
+            .container { padding: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Home</a>
+        
+        <h1>Privacy Policy</h1>
+        <div class="date">Effective Date: May 31, 2026</div>
+
+        <h2>1. Information We Collect</h2>
+        <p>SEO Master is designed to run locally in your browser. We prioritize your privacy and collect the minimum amount of data necessary to function.</p>
+        <ul>
+            <li><strong>Page Data:</strong> When you click to analyze a webpage, the extension reads the public HTML elements (title, meta tags, headings, content) of the active tab.</li>
+            <li><strong>Web Vitals:</strong> The extension collects performance metrics (LCP, CLS, INP) directly from your browser APIs.</li>
+            <li><strong>No Personal Data:</strong> We do NOT collect, store, or transmit your name, email, IP address, browsing history, or any other personally identifiable information (PII).</li>
+        </ul>
+
+        <h2>2. How We Use Information</h2>
+        <p>The extracted data is used strictly to generate SEO scores, technical audits, and AI/GEO readiness reports within the extension's side panel UI. All core analysis logic executes locally on your device.</p>
+
+        <h2>3. Third-Party Services</h2>
+        <p>To provide advanced AI-driven features (such as AI Snippet Optimization and SERP Gap Analysis), SEO Master sends anonymized text snippets to a free, public AI service (<code>text.pollinations.ai</code>).</p>
+        <ul>
+            <li>No personal data or user credentials are included in these requests.</li>
+            <li>These requests are only triggered when you actively click the respective AI analysis buttons in the extension.</li>
+        </ul>
+
+        <h2>4. Data Storage</h2>
+        <p>Analysis history and user preferences (such as your Light/Dark mode choice) are saved locally on your device using Chrome's local storage (<code>chrome.storage.local</code>). We do not have backend servers and do not store your data externally.</p>
+
+        <h2>5. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Any changes will be reflected in the Chrome Web Store listing and on this page.</p>
+
+        <h2>6. Contact</h2>
+        <p>If you have any questions about this Privacy Policy, please contact the developer via the support tab in the Chrome Web Store.</p>
+    </div>
+</body>
+</html>
