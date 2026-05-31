@@ -1,0 +1,97 @@
+/* ============================================================
+   SEO Master — SERP Overlay Styles
+   Injected into Google search results pages
+   ============================================================ */
+
+.seo-master-serp-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f8f9fa;
+  border: 1px solid #dadce0;
+  border-radius: 6px;
+  padding: 6px 12px;
+  margin-bottom: 12px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+  .seo-master-serp-bar {
+    background: #202124;
+    border-color: #3c4043;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  }
+}
+
+.seo-master-serp-bar .sm-logo {
+  font-weight: 800;
+  color: white;
+  background: linear-gradient(135deg, #00d4ff, #8b5cf6);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+
+.seo-master-serp-bar .sm-metric {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.seo-master-serp-bar .sm-label {
+  color: #70757a;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+@media (prefers-color-scheme: dark) {
+  .seo-master-serp-bar .sm-label {
+    color: #9aa0a6;
+  }
+}
+
+.seo-master-serp-bar .sm-value {
+  color: #202124;
+  font-weight: 600;
+}
+
+@media (prefers-color-scheme: dark) {
+  .seo-master-serp-bar .sm-value {
+    color: #e8eaed;
+  }
+}
+
+.seo-master-serp-bar .sm-value.high { color: #188038; }
+.seo-master-serp-bar .sm-value.med { color: #f29900; }
+.seo-master-serp-bar .sm-value.low { color: #d93025; }
+.seo-master-serp-bar .sm-value.traffic { color: #1a73e8; }
+
+@media (prefers-color-scheme: dark) {
+  .seo-master-serp-bar .sm-value.high { color: #81c995; }
+  .seo-master-serp-bar .sm-value.med { color: #fde293; }
+  .seo-master-serp-bar .sm-value.low { color: #f28b82; }
+  .seo-master-serp-bar .sm-value.traffic { color: #8ab4f8; }
+}
+
+/* Skeleton Loading Animation */
+.seo-master-serp-bar .sm-skeleton {
+  height: 14px;
+  background: #e0e0e0;
+  border-radius: 2px;
+  animation: sm-pulse 1.5s infinite;
+}
+
+@media (prefers-color-scheme: dark) {
+  .seo-master-serp-bar .sm-skeleton {
+    background: #3c4043;
+  }
+}
+
+@keyframes sm-pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}

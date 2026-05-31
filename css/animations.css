@@ -1,0 +1,86 @@
+/* ============================================================
+   SEO Master — Animations
+   Micro-interactions, view transitions, loading states
+   ============================================================ */
+
+/* ── View Transitions API ──────────────────────────────────── */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.25s;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* Custom view transition for tab content crossfade */
+::view-transition-old(tab-content) {
+  animation: fade-out 0.15s ease forwards;
+}
+
+::view-transition-new(tab-content) {
+  animation: fade-in-up 0.25s ease backwards;
+}
+
+/* ── Keyframes ─────────────────────────────────────────────── */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes shimmer {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.4); }
+  70% { box-shadow: 0 0 0 6px rgba(0, 212, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 212, 255, 0); }
+}
+
+@keyframes draw-gauge {
+  from { stroke-dashoffset: 283; }
+  /* to {} is handled dynamically via JS inline style */
+}
+
+/* ── Staggered List Animation ──────────────────────────────── */
+.animate-list > * {
+  opacity: 0;
+  animation: fade-in-up 0.3s ease forwards;
+}
+
+.animate-list > *:nth-child(1) { animation-delay: 0.05s; }
+.animate-list > *:nth-child(2) { animation-delay: 0.10s; }
+.animate-list > *:nth-child(3) { animation-delay: 0.15s; }
+.animate-list > *:nth-child(4) { animation-delay: 0.20s; }
+.animate-list > *:nth-child(5) { animation-delay: 0.25s; }
+.animate-list > *:nth-child(6) { animation-delay: 0.30s; }
+.animate-list > *:nth-child(7) { animation-delay: 0.35s; }
+.animate-list > *:nth-child(8) { animation-delay: 0.40s; }
+
+/* ── Utility Classes ───────────────────────────────────────── */
+.fade-in { animation: fade-in 0.3s ease forwards; }
+.fade-in-up { animation: fade-in-up 0.4s ease forwards; }
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
