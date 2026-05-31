@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "SEO Master",
+  "name": "SEO Master: Website Audit & SEO Analyzer",
   "version": "1.0.0",
-  "description": "All-in-one SEO toolkit — on-page analysis, technical audit, Core Web Vitals, AI/GEO readiness score, competitor gaps, and export. Replaces 5-7 separate SEO extensions.",
+  "description": "Ultimate SEO extension for on-page audits, Core Web Vitals, SERP checker, and AI optimization. The best free SEO tool for Chrome.",
   "permissions": [
     "sidePanel",
     "storage",
